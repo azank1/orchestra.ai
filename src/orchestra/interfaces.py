@@ -50,3 +50,10 @@ class PersistenceInterface(ABC):
     @abstractmethod
     async def save_state(self, state: ConversationState) -> None:
         pass
+
+
+class KnowledgeInterface(ABC):
+    @abstractmethod
+    def load_menu(self) -> Dict[str, Any]:
+        """Retrieve the restaurant menu or other knowledge sources."""
+        pass
