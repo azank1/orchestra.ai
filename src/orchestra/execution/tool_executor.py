@@ -1,26 +1,21 @@
 import asyncio
 from typing import Dict, Any, List, Callable
+
 from ..interfaces import ToolInterface
+from . import tools
 
 
 class ToolExecutor(ToolInterface):
-    """Central tool execution coordinator"""
+    """Central tool execution coordinator."""
 
     def __init__(self):
         self.registered_tools: Dict[str, Callable] = {}
         self._register_default_tools()
 
-    def _register_default_tools(self):
-        """Register default tools"""
-        from .tools.menu import get_menu, search_menu_item, get_business_hours
-        from .tools.sheets import add_order_to_sheet
-
-        self.registered_tools.update({
-            "get_menu": get_menu,
-            "search_menu_item": search_menu_item,
-            "get_business_hours": get_business_hours,
-            "add_order_to_sheet": add_order_to_sheet
-        })
+    def _register_default_tools(self) -> None:
+        """Register all tools exposed by the tools package."""
+        for name in getattr(tools, "__all__", []):
+            self.registered_tools[name] = getattr(tools, name)
 
     async def execute(self, tool_name: str, parameters: Dict[str, Any]) -> Dict[str, Any]:
         """Execute a tool with given parameters"""
