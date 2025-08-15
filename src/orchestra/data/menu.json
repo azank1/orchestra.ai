@@ -1,0 +1,33 @@
+{
+  "Appetizers": [
+    {
+      "name": "Hummus Platter",
+      "price": 8.99,
+      "description": "Creamy chickpea hummus served with warm pita bread and fresh vegetables."
+    },
+    {
+      "name": "Spanakopita",
+      "price": 7.99,
+      "description": "Crispy phyllo pastry filled with spinach and feta cheese."
+    }
+  ],
+  "Main Courses": [
+    {
+      "name": "Gyro Platter",
+      "price": 15.99,
+      "description": "Your choice of seasoned lamb or chicken, served with rice, Greek salad, and tzatziki sauce."
+    },
+    {
+      "name": "Falafel Wrap",
+      "price": 12.99,
+      "description": "Crispy falafel balls with lettuce, tomato, and tahini sauce wrapped in a warm pita."
+    }
+  ],
+  "Desserts": [
+    {
+      "name": "Baklava",
+      "price": 6.99,
+      "description": "Rich, sweet pastry made of layers of phyllo filled with chopped nuts and sweetened with honey."
+    }
+  ]
+}
