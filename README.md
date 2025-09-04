@@ -1,7 +1,7 @@
-# orchestra.ai
+- orchestra.ai
 A conversational AI orchestration platform for automating business voice communications.
 
-## Orchestration Webhook
+- Orchestration Webhook
 A FastAPI app is provided in `src/orchestra/app.py` with a `/webhook` endpoint. It wires together the `VoiceServer` and `Orchestrator` classes and logs each interaction, completing an audio/text round-trip.
 
 Run the service locally:
